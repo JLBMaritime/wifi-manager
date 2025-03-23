@@ -26,6 +26,7 @@ A web-based Wi-Fi manager for Raspberry Pi that allows you to scan, connect to, 
 
 1. Clone this repository:
    ```
+   sudo apt-get install git
    git clone https://github.com/JLBMaritime/wifi-manager.git
    cd wifi-manager
    ```
