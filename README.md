@@ -24,14 +24,17 @@ A web-based Wi-Fi manager for Raspberry Pi that allows you to scan, connect to, 
 
 ### Automatic Installation
 
-1. Clone this repository:
+1. Download Git (If required in order clone the Git repository below)
    ```
    sudo apt-get install git
+   ```
+2. Clone this repository:
+   ```
    git clone https://github.com/JLBMaritime/wifi-manager.git
    cd wifi-manager
    ```
 
-2. Make the installation script executable and run it:
+3. Make the installation script executable and run it:
    ```
    chmod +x ./install.sh
    sudo ./install.sh
