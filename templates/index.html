@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JLBMaritime Wi-Fi Manager</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="/static/img/logo.png" alt="JLBMaritime Logo" id="logo">
+        </div>
+        <h1>Wi-Fi Manager</h1>
+    </header>
+
+    <main>
+        <section id="current-connection" class="card">
+            <h2>Current Connection</h2>
+            <div id="connection-details">
+                <div class="loading">Loading...</div>
+            </div>
+        </section>
+
+        <section id="available-networks" class="card">
+            <h2>Available Networks</h2>
+            <button id="scan-button" class="action-button">
+                <i class="fas fa-sync-alt"></i> Scan
+            </button>
+            <div id="networks-list">
+                <div class="loading">Scanning...</div>
+            </div>
+        </section>
+
+        <section id="saved-networks" class="card">
+            <h2>Saved Networks</h2>
+            <div id="saved-list">
+                <div class="loading">Loading...</div>
+            </div>
+        </section>
+
+        <section id="diagnostics" class="card">
+            <h2>Network Diagnostics</h2>
+            <div id="diagnostics-results">
+                <div class="loading">Loading...</div>
+            </div>
+            <div class="ping-container">
+                <input type="text" id="ping-target" placeholder="IP or hostname (default: 8.8.8.8)">
+                <button id="ping-button" class="action-button">
+                    <i class="fas fa-satellite-dish"></i> Run Ping Test
+                </button>
+            </div>
+            <div id="ping-results" class="hidden">
+                <h3>Ping Results</h3>
+                <pre id="ping-output"></pre>
+            </div>
+        </section>
+    </main>
+
+    <!-- Password Modal -->
+    <div id="password-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Connect to Network</h2>
+            <p id="modal-network-name"></p>
+            <form id="password-form">
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <div class="password-container">
+                        <input type="password" id="password" required>
+                    </div>
+                    <div class="show-password-toggle">
+                        <input type="checkbox" id="show-password">
+                        <label for="show-password">Show Password</label>
+                    </div>
+                </div>
+                <button type="submit" class="action-button">Connect</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div id="toast-container"></div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
