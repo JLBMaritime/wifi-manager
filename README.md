@@ -24,7 +24,7 @@ A web-based Wi-Fi manager for Raspberry Pi that allows you to scan, connect to, 
 
 ### Automatic Installation
 
-1. Download Git (If required in order clone the Git repository below)
+1. Download Git (If required in order to clone the Git repository below)
    ```
    sudo apt-get install git
    ```
